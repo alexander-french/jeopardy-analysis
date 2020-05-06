@@ -21,3 +21,9 @@ show_data['Float Value'] = show_data['Value'].apply(convert_to_float)
 #Finding the mean value of questions containing a certain word
 new_df = find_in_q(["King"])
 print(new_df['Float Value'].mean())
+
+#Function which counts the number of unique answers
+def unique():
+    return new_df['Answer'].value_counts()
+
+print(unique())

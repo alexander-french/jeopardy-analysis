@@ -17,3 +17,7 @@ print(find_in_q(test_words))
 #Column which contains the float equivalents of question values
 convert_to_float = lambda x: float(x[1:].replace(',', '',) if x != 'None' else 0)
 show_data['Float Value'] = show_data['Value'].apply(convert_to_float)
+
+#Finding the mean value of questions containing a certain word
+new_df = find_in_q(["King"])
+print(new_df['Float Value'].mean())
